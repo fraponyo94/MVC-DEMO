@@ -16,7 +16,7 @@ public class DetailController {
     private DetailService detailService;
 
     @RequestMapping(value = "/",method = RequestMethod.GET)
-    public String welcome(Model model) {
+    public String welcome() {
 
         return "welcome";
     }
@@ -31,6 +31,7 @@ public class DetailController {
 
     @RequestMapping(value = "/details",method = RequestMethod.POST)
     public String submitForm(@ModelAttribute("detail") Detail detail,Model model) {
+
         model.addAttribute("fullName",detailService.getName(detail));
         return "hello";
     }

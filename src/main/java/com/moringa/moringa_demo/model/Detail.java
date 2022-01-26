@@ -5,6 +5,9 @@ public class Detail {
     private String firstName;
     private String lastName;
 
+    public Detail() {
+    }
+
     public String getFirstName() {
         return firstName;
     }
@@ -17,7 +20,15 @@ public class Detail {
         return lastName;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setLastName(String lastName){
+        this.lastName =lastName;
+    }
+
+    @Override
+    public String toString() {
+        return "Detail{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                '}';
     }
 }
